@@ -23,15 +23,34 @@ public class Person {
         return getAge().isPresent();
     }
 
-    public boolean hasAddress() { return !getAddress().isEmpty();}
+    public boolean hasAddress() {
+        return !getAddress().isEmpty();
+    }
 
-    public String getName() { return name; }
-    public String getSurname() { return surname;}
-    public OptionalInt getAge() { return OptionalInt.of(age); }
-    public String getAddress() { return address; }
+    public String getName() {
+        return name;
+    }
 
-    public void setAddress(String address) { this.address = address; }
-    public void happyBirthday() { this.age ++; }
+    public String getSurname() {
+        return surname;
+    }
+
+    public OptionalInt getAge() {
+        return OptionalInt.of(age);
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public void happyBirthday() {
+        this.age++;
+    }
+
     public PersonBuilder newChildBuilder() {
         return new PersonBuilder().setSurname(surname).setAddress(address);
     }
